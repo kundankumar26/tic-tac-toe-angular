@@ -1,0 +1,31 @@
+<div class="main-board">
+
+    <table style="text-align: center">
+        <tr>
+          <th> </th>
+          <th>Player X</th>
+          <th>Player O</th> 
+        </tr>
+        <tr>
+          <td>Points</td>
+          <td> {{ xCount }} </td>
+          <td>{{ yCount }}</td>
+        </tr>
+      </table>
+
+    <h4 *ngIf="!winner">Current Player: {{ player }}</h4>
+
+    <div class="start-new-game">
+        <button nbButton outline status="danger" (click)="newGame()"> Start New Game </button>
+    </div>
+
+    <h3> {{ result }} </h3>
+
+    <main>
+        <app-square
+            *ngFor="let val of squares; let i=index"
+            [value] = "val"
+            (click)="makeMove(i)">
+        </app-square>
+    </main>
+</div>

@@ -1,0 +1,30 @@
+main{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 100px 100px 100px;
+}
+
+app-square{
+    border: 1px gray solid;
+    height: 100px;
+}
+
+.start-new-game{
+    margin: 20px auto;
+}
+
+.main-board{
+    display: block;
+    text-align: center;
+}
+main{
+    justify-content: center;
+}
+table{
+    margin: 0 auto;
+    border: 2px solid white;
+}
+table > tr > th{
+    padding: 10px 40px;
+    border-bottom: 2px solid white;
+}
